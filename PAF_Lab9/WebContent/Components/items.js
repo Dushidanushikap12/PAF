@@ -11,7 +11,7 @@ if ($("#alertSuccess").text().trim() == "null" ) {
 
 
 
-// SAVE ============================================
+// SAVE ======================================
 $(document).on("click", "#btnSave", function(event) { 
 // Clear alerts---------------------
  $("#alertSuccess").text(""); 
@@ -26,10 +26,10 @@ if (status != true)
  $("#alertError").show(); 
  return; 
  } 
-// If valid------------------------
+// If valid----------------------
  $("#formItem").submit(); 
 }); 
-// UPDATE==========================================
+// UPDATE=====================================
 $(document).on("click", ".btnUpdate", function(event) 
 { 
  $("#hidItemIDSave").val($(this).closest("tr").find('#hidItemIDUpdate').val()); 
@@ -38,7 +38,7 @@ $(document).on("click", ".btnUpdate", function(event)
  $("#userPhoneNumber").val($(this).closest("tr").find('td:eq(2)').text()); 
  $("#userAddress").val($(this).closest("tr").find('td:eq(3)').text()); 
 }); 
-// CLIENT-MODEL================================================================
+// CLIENT-MODEL========================================
 function validateItemForm() 
 { 
 // NAME
@@ -56,12 +56,12 @@ if ($("#userEmail").val().trim() == "")
  { 
  return "Insert User Phone."; 
  } 
- //Address-------------------------------
+ //Address------------------------------
 if ($("#userAddress").val().trim() == "") 
  { 
  return "Insert User Address."; 
  }
- //Phone Number-------------------------------
+ //Phone Number------------------------
 if ($("#userPhoneNumber").val().trim() == "") 
  { 
  return "Insert Phone Number."; 
@@ -70,12 +70,12 @@ if ($("#userPhoneNumber").val().trim() == "")
  //SAVE-------------------------------
  $(document).on("click", "#btnSave", function(event)
 {
-// Clear alerts---------------------
+// Clear alerts-------------------
  $("#alertSuccess").text("");
  $("#alertSuccess").hide();
  $("#alertError").text("");
  $("#alertError").hide();
-// Form validation-------------------
+// Form validation-----------------
 var status = validateItemForm();
 if (status != true)
  {

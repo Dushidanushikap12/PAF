@@ -19,27 +19,21 @@ public class ItemsAPI extends HttpServlet {
 	
 	Item itemObj = new Item();
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+    
     public ItemsAPI() {
         super();
-        // TODO Auto-generated constructor stub
+        
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		String output = itemObj.insertusers(request.getParameter("userName"),request.getParameter("userEmail"),request.getParameter("userPhoneNumber"),request.getParameter("userAddress"));
 		doGet(request, response);
 	}
@@ -68,11 +62,9 @@ public class ItemsAPI extends HttpServlet {
 
 	 
 
-	/**
-	 * @see HttpServlet#doPut(HttpServletRequest, HttpServletResponse)
-	 */
+	
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		Map paras = getParasMap(request);
 		
 		String output = itemObj.updateusers(paras.get("hidItemIDSave").toString(),
@@ -81,11 +73,9 @@ public class ItemsAPI extends HttpServlet {
 		response.getWriter().write(output);
 	}
 
-	/**
-	 * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)
-	 */
+	
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		Map paras = getParasMap(request);
 		
 		String output = itemObj.removeUser(paras.get("userID").toString());

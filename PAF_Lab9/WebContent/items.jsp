@@ -15,7 +15,7 @@ String stsMsg = "";
 	request.getParameter("userPhoneNumber"), 
 	request.getParameter("userAddress")); 
 	} 
-	else//Update----------------------
+	else//Update-----------------
 	{ 
 	stsMsg = itemObj.updateusers(request.getParameter("hidItemIDSave"), 
 	request.getParameter("userName"), 
@@ -25,7 +25,7 @@ String stsMsg = "";
 	} 
 	session.setAttribute("statusMsg", stsMsg); 
 } 
-//Delete-----------------------------
+//Delete-------------------------
 if (request.getParameter("hidItemIDDelete") != null) 
 { 
 Item itemObj = new Item(); 

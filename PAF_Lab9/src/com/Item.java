@@ -39,7 +39,7 @@ public class Item {
 	 Connection con = connect();
 	 if (con == null)
 	 {
-	 return "Error while connecting to the database for inserting";
+	 return "Error while connecting to the db for inserting";
 	 }
 	 // create a prepared statement
 	 String query = " insert into userss(`userID`,`userName`,`userEmail`,`userPhoneNumber`,`userAddress`)"
@@ -78,7 +78,7 @@ public class Item {
 	 Connection con = connect();
 	 if (con == null)
 	 {
-	 return "Error while connecting to the database for reading.";
+	 return "Error while connecting to the db for reading.";
 	 }
 	 // Prepare the HTML table to be displayed
 	 
@@ -136,7 +136,7 @@ public class Item {
 	 }
 	catch (Exception e)
 	 {
-	 output = "Error while reading the users.";
+	 output = "Error while reading the users management.";
 	 System.err.println(e.getMessage());
 	 }
 	return output;
@@ -151,7 +151,7 @@ public class Item {
 	 Connection con = connect();
 	 if (con == null)
 	 {
-	 return "Error while connecting to the database";
+	 return "Error while connecting to the db";
 	 }
 	
 	 Statement st=con.createStatement();
